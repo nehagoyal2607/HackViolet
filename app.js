@@ -3,9 +3,10 @@ const bodyParser = require("body-parser");
 const session = require("express-session");
 const passport = require("passport");
 const expressSanitizer = require("express-sanitizer");
+const methodOverride = require("method-override");
 const LocalStrategy = require("passport-local");
 const mongoose = require("mongoose");
-
+const client = require('twilio')('ACd86ef1ae1c5f242dd8818767e6d8a5b9', 'f30c79e6a089ccdea17425dfabedaa7c');
 const app = express();
 
 const User = require("./models/user");
@@ -23,7 +24,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 app.use(express.json())
 app.use(expressSanitizer());
-
+app.use(methodOverride("_method"));
 //auth config
 app.use(session({
 	secret:"HackViolet",
@@ -37,9 +38,10 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req,res,next){
-	
+	res.locals.currentUser = req.user;
 	next();
 })
+
 
 app.get("/register", function(req,res){
 	res.render("register");
@@ -81,10 +83,48 @@ app.get("/music", (req, res)=>{
 app.get("/exercise", (req, res)=>{
 	res.render("exercise");
 })
+app.put("/update", (req, res)=>{
+	var updated = {date:req.body.date}
+	if(req.user){
+		User.findByIdAndUpdate(req.user._id, updated,  (err, user)=>{
+			if(err){
+				console.log(err);
+			}else{
+				// user.date = req.body.date;
+				console.log("done");
+			}
+		})
+	}
+})
 //routes
 app.get("/",function(req,res){
-	// console.log(req.user.date);
-	res.render("home");
+	function sendMessage(){
+		client.messages.create({
+			body: 'It is that time of the month again, ugh! But we have got your back. A reminder for you to get your stock of pads and tampons refilled!',
+			to: '+918146896462',
+			from: '+18508015890'
+		 }).then(message => console.log(message))
+		   // here you can implement your fallback code
+		   .catch(error => console.log(error))
+	}
+	var today = new Date();
+	let flag = 1;
+	
+	if(req.user && req.user.date.getTime()!=0){
+		var today = new Date();
+	// 	console.log(req.user);
+	// console.log(Math.abs(req.user.date.getDate()-today.getDate()));
+		if(Math.abs(req.user.date.getDate()- today.getDate()) <= 4){
+			flag = 2;
+			sendMessage();
+			console.log("Sent");
+		}else{
+			flag = 0;
+		}
+	}else if(!req.user){
+		flag = -1;
+	}
+	res.render("home", {flag:flag});
 })
 
 app.listen(process.env.PORT || 3000, process.env.IP, () => {

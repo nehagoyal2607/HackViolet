@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/home.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js"></script> -->
 	<script type="text/javascript" src="js/home.js" async></script>
 </head>
 
@@ -174,8 +176,40 @@
 <div class="panel" data-color="red">
   <h2>Red panel</h2>
 </div>
-
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+  <script type="text/javascript">
+   const flag = "<%=flag%>"
+  function display(){
+    // swal({
+    //     title: "Sweet!",
+    //     imageUrl: 'https://i.imgur.com/4NZ6uLY.jpg'
+    //   });
+    swal("When did you last get your period (YYYY-MM-DD) ?", {
+    content: "input",
+    button: {
+      closeOnClickOutside :true
+  },
+    })
+    .then((value) => {
+      if(value && value.length > 0){
+        swal(`Hope you have a relaxing time here :) `);
+        axios.put("/update", {
+          date:value
+        })
+      }
+      
+    });
+  };
+  if(flag == "1" ){
+    display();
+  }else if(flag =="2"){
+    swal({
+      title: "That time of the month is coming again, ugh! But we have got your back!"
+    })
+  }
+  
+  </script>
 
 <%-include("partials/assets1") %>
 
