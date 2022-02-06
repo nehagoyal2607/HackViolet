@@ -4,8 +4,10 @@ let pose;
 let skeleton;
 let dir = 0;
 let count=0;
+const counterdiv = document.getElementById("counterDiv");
+
 function setup() {
-  createCanvas(1000, 480);
+  createCanvas(1000, 580);
   video = createCapture(VIDEO);
   video.hide();
   // scale(-1, 1);
@@ -26,22 +28,10 @@ function modelLoaded() {
 }
 
 function draw() {
-  image(video, 0, 0);
+  image(video, 50, 80);
 
   if (pose) {
-    let eyeR = pose.rightEye;
-    let eyeL = pose.leftEye;
-  
-    // let d = dist(eyeR.x, eyeR.y, eyeL.x, eyeL.y);
-    // fill(255, 0, 0);
-    // ellipse(pose.nose.x, pose.nose.y, d);
-    // fill(0, 0, 255);
-    // ellipse(pose.rightWrist.x, pose.rightWrist.y, 32);
-    // ellipse(pose.leftWrist.x, pose.leftWrist.y, 32);
-
-    // console.log(pose.leftElbow.position.x);
     
-    // console.log(pose);
     for (let i = 0; i < pose.keypoints.length; i++) {
       let x = pose.keypoints[i].position.x;
       let y = pose.keypoints[i].position.y;
@@ -83,18 +73,17 @@ angle = Math.round(angleBetweenThreePoints(upadatedPos));
           dir = 0;
         }
       }
-// if(angle>90 && angle<180){
-//   console.log("Angle is getting updated OBTUSE",angle)
-// }
-// if(angle>0 && angle<90){
-//   console.log("Angle is getting updated ACUTE",angle)
-// }
+      document.getElementById("counterDiv").innerHTML = '';
+      const html = `
+      ${count}
+      `;
+      document.getElementById("counterDiv").innerHTML = html;
 
       }
       
       // console.log(x+" <-> "+y);
       // fill(0, 255, 0);
-      ellipse(x, y, 16, 16);
+      // ellipse(x, y, 16, 16);
     }
 
     for (let i = 0; i < skeleton.length; i++) {
