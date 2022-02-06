@@ -1,5 +1,5 @@
 <%-include("partials/header") %>
-    
+<%-include("partials/assets2") %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 
@@ -8,246 +8,175 @@
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 	<script type="text/javascript" src="js/home.js" async></script>
 </head>
-<style>
-    *{
-        margin:0;
-        box-sizing: border-box;
-        outline:none;
-    }
-    body{
-        background-color: #342229;
-        overflow-x: hidden;
-    }
-    .wrapper{
-        position: relative;
-    }
-    .slider{
-        position: relative;
-    }
-    .slider .item{
-        position: relative;
-        text-align:center;
-        height:100vh;
-    }
-    .slider .item:before{
-        content: attr(data-text);
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        color:#fff;
-        font-size: 300px;
-        font-family: Butler;
-        text-transform: uppercase;
-        letter-spacing: 30px;
-        opacity:.1;
-    }
-    .slider .item img{
-        margin: 140px auto 0;
-    }
-    .slider h1{
-        font-size:70px;
-        letter-spacing: 1px;
-        color: #fff;
-        font-weight: normal;
-        text-transform: uppercase;
-        transition: all ease 0.5s;
-    }
-    .slider .text{
-        position: absolute;
-        width:100%;
-        bottom: 30px;
-    }
-    .slider .slick-arrow{
-        position:absolute;
-        top:inherit;
-        bottom: 15px;
-        width:70px;
-        height:70px;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        z-index: 9;
-    }
-    .slider .slick-next{
-        right:inherit;
-        left:220px;
-    }
-    .slider .slick-prev{
-        left:130px;
-    }
-    .slider .slick-arrow.slick-disabled, 
-    .slider .slick-arrow.slick-disabled:before{
-        opacity: .3;
-    }
 
-    .slider .slick-next:before,
-    .slider .slick-prev:before{
-        content: '';
-        position: absolute;
-        background: url(images/arrow-next.svg);
-        background-size: 10px;
-        width: 10px;
-        height: 16px;
-        left:50%;
-        top:50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .slider .slick-prev:before{
-        background: url(images/arrow-next.svg);
-        background-size: 10px;
-    }
-
-    .btn{
-        width: 250px;
-        height:70px;
-        line-height: 70px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 500;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        background-color: #f2ca2c;
-        color:#000;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        z-index:2;
-        transition: all ease 0.5s;
-        overflow: hidden;
-    }
-    .btn:before{
-        content: '';
-        position:absolute;
-        top:-100%;
-        left:-100%;
-        width:100%;
-        height: 100%;
-        background-color: #000;
-        z-index: -1;
-        transition: all ease 0.5s;
-    }
-    .btn:hover{
-        color:#fff;
-    }
-    .btn:hover:before{
-       top:0;
-       left:0;
-    }
-
-    .wave-line{
-        width:100%;
-        position:absolute;
-        top:43%;
-        left:0;
-        transform: translateY(-50%);
-        z-index: -1;
-    }
-    .wave-line .line{
-        position:absolute;
-        width: 100%;
-        height: 130px;
-    }
-    .wave-line .line1{
-        background: url(images/line1.svg) repeat-x;
-        background-size: contain;
-        animation: lineOne 30s linear infinite;
-    }
-    .wave-line .line2{
-        background: url(images/line2.svg) repeat-x;
-        background-size: contain;
-        animation: lineTwo 30s linear infinite;
-    }
-    .wave-line .line3{
-        background: url(images/line3.svg) repeat-x;
-        background-size: contain;
-        animation: lineThree 30s linear infinite;
-    }
-
-    @keyframes lineOne {
-        50%{
-            background-position: -150% 0;
-        }
-    }
-    @keyframes lineTwo {
-        50%{
-            background-position: -100% 0;
-        }
-    }
-    @keyframes lineThree {
-        50%{
-            background-position: 150% 0;
-        }
-    }
-</style>
 <body>
   <%-include("partials/nav") %>
   <header>
+<div class="panel" data-color="white">
+    <div class="edgtf-content-inner"> <div class="edgtf-slider">
+      <div class="edgtf-slider-inner">
+      <p class="rs-p-wp-fix"></p>
+      <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+      <rs-module id="rev_slider_1_1" style="" data-version="6.5.14">
+      <rs-slides>
+      <rs-slide style="position: absolute;" data-key="rs-1" data-title="Slide" data-anim="ms:600;r:0;" data-in="o:0;" data-out="a:false;">
+      <img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="Slide" title="Main Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/transparent.png" data-parallax="off" data-no-retina>
+      <rs-layer id="slider-1-slide-1-layer-3" data-type="image" data-xy="x:c;xo:771px,608px,250px,133px;y:m;yo:224px,174px,269px,222px;" data-text="l:22;a:inherit;" data-dim="w:49px,39px,30px,9px;h:48px,38px,29px,9px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;rZ:60deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:810;sp:500;sR:810;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2190;" style="z-index:5;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="h" class="tp-rs-img rs-lazyload" width="49" height="48" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-10.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-4" data-type="image" data-xy="x:c;xo:694px,555px,197px,114px;y:m;yo:143px,116px,226px,202px;" data-text="l:22;a:inherit;" data-dim="w:96px,66px,55px,26px;h:205px,141,117px,56px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:500;sp:500;sR:500;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2500;" style="z-index:6;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="g" class="tp-rs-img rs-lazyload" width="96" height="205" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-9.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-5" data-type="image" data-xy="x:c;xo:599px,489px,146px,90px;y:m;yo:200px,153px,265px,217px;" data-text="l:22;a:inherit;" data-dim="w:54px,40px,30px,15px;h:82px,61,46px,23px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1200;sp:500;sR:1200;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1800;" style="z-index:7;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="d" class="tp-rs-img rs-lazyload" width="54" height="82" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-8.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-6" data-type="image" data-xy="x:c;xo:116px,118px,-145px,-95px;y:m;yo:206px,166px,270px,218px;" data-text="l:22;a:inherit;" data-dim="w:46px,36px,30px,16px;h:50px,39px,33px,17px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:-50px;rZ:-50deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:890;sp:500;sR:890;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2110;" style="z-index:8;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="h" class="tp-rs-img rs-lazyload" width="46" height="50" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-7.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-7" data-type="image" data-xy="x:c;xo:658px,518px,168px,101px;y:m;yo:-19px,-9px,141px,125px;" data-text="l:22;a:inherit;" data-dim="w:48px,38px,25px,18px;h:53px,42px,28px,20px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:right;o:1;rZ:-360deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:600;sp:800;sR:600;" data-frame_999="o:0;tp:600;st:w;sR:2100;" style="z-index:9;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="g" class="tp-rs-img rs-lazyload" width="48" height="53" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-6.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-8" data-type="image" data-xy="x:c;xo:713px,563px,233px,121px;y:m;yo:-144px,-94px,56px,80px;" data-text="l:22;a:inherit;" data-dim="w:123px,113px,93px,43px;h:58px,53px,44,20px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1000;sp:500;sR:1000;" data-frame_999="o:0;tp:600;st:w;sR:2000;" style="z-index:10;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="d" class="tp-rs-img rs-lazyload" width="123" height="58" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-5.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-9" data-type="image" data-xy="x:c;xo:666px,516px,186px,106px;y:m;yo:-139px,-89px,61px,81px;" data-text="l:22;a:inherit;" data-dim="w:102px,92px,72px,40px;h:49px,44px,35px,19px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1100;sp:500;sR:1100;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1900;" style="z-index:11;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="s" class="tp-rs-img rs-lazyload" width="102" height="49" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-4.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-10" data-type="image" data-xy="x:c;xo:342px,292px,-8px,-8px;y:m;yo:31px,31px,176px,151px;" data-text="l:22;a:inherit;" data-dim="w:527px,397px,280px,197px;h:501px,377px,266px,187px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:300;sp:500;sR:300;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2700;" style="z-index:12;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="f" class="tp-rs-img rs-lazyload" width="527" height="501" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-3.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-11" data-type="image" data-xy="x:c;xo:23px,73px,-187px,-119px;y:m;yo:-23px,-23px,128px,125px;" data-text="l:22;a:inherit;" data-dim="w:55px,45px,30px,20px;h:56px,46px,31px,20px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:top;o:1;rZ:400deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:400;sp:1000;sR:400;" data-frame_999="o:0;tp:600;st:w;sR:2100;" style="z-index:13;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="g" class="tp-rs-img rs-lazyload" width="55" height="56" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-2.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-12" data-type="image" data-xy="x:c;xo:17px,32px,-214px,-125px;y:m;yo:187px,148px,250px,212px;" data-text="l:22;a:inherit;" data-dim="w:127px,107px,87px,37px;h:106px,89px,73px,31px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:700;sp:500;sR:700;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2300;" style="z-index:14;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="j" class="tp-rs-img rs-lazyload" width="127" height="106" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-1.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-13" data-type="text" data-xy="xo:0,0,1px,1px;y:m;yo:176px,168px,26px,-43px;" data-text="l:22;a:inherit;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1400;sp:500;sR:1400;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1600;" style="z-index:15;font-family:'Muli';"><a itemprop="url" href="https://maree.qodeinteractive.com/portfolio-item/enthusiasm-is-great/" target="_self" class="edgtf-btn edgtf-btn-medium edgtf-btn-outline edgtf-btn-direction-animation edgtf-btn-custom-hover-color" data-hover-color="#ffffff">
+      <span class="edgtf-btn-text">Read More</span>
+      <span class="edgtf-btn-background-holder">
+      <span class="edgtf-btn-background"></span>
+      </span>
+      </a>
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-14" data-type="text" data-color="#6d6d6d" data-xy="xo:0,0,0,-718px;y:m;yo:71px,71px,-79px,-221px;" data-text="w:normal;l:30;fw:300;a:inherit;" data-dim="w:645px;h:61px;" data-vbility="t,t,t,f" data-rsp_o="off" data-rsp_bd="off" data-frame_0="o:1;tp:600;" data-frame_0_lines="d:15;x:50px;o:0;" data-frame_1="tp:600;e:power1.out;st:1200;sp:500;sR:1200;" data-frame_1_lines="d:15;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1800;" style="z-index:16;font-family:'Muli';">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-15" data-type="text" data-color="#000000" data-xy="xo:-3px,-3px,-3px,-1px;y:m;yo:-129px,-113px,-243px,-173px;" data-text="s:90,80,60,40;l:100;ls:-2px;a:inherit;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:800;sp:500;sR:800;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2200;" style="z-index:5;font-family:'Muli';">Projects made
+      </rs-layer><rs-layer id="slider-1-slide-1-layer-16" data-type="text" data-color="#000000" data-xy="xo:-5px,-5px,-5px,-2px;y:m;yo:-35px,-25px,-174px,-125px;" data-text="s:90,80,60,40;l:100;ls:-2px;a:inherit;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1000;sp:500;sR:1000;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2000;" style="z-index:18;font-family:'Muli';">with <span style=" font-family: Playfair Display; font-style: italic; font-weight: 700;">love</span>
+      </rs-layer> </rs-slide>
+      <rs-slide style="position: absolute;" data-key="rs-8" data-title="Slide" data-anim="ms:600;r:0;" data-in="o:0;" data-out="a:false;">
+      <img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="Slide" title="Main Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/transparent.png" data-parallax="off" data-no-retina>
+      <rs-layer id="slider-1-slide-8-layer-3" data-type="image" data-xy="x:c;xo:8px,8px,-212px,-132px;y:m;yo:194px,174px,286px,228px;" data-text="l:22;a:inherit;" data-dim="w:49auto,39px,24px,12px;h:48px,38px,24px,12px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;rZ:60deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:800;sp:500;sR:800;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2200;" style="z-index:5;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="m" class="tp-rs-img rs-lazyload" width="49" height="48" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-12.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-8-layer-5" data-type="image" data-xy="x:c;xo:94px,90px,-168px,-106px;y:m;yo:256px,179px,278px,228px;" data-text="l:22;a:inherit;" data-dim="w:52auto,42px,30px,15px;h:80px,65px,46px,23px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1190;sp:500;sR:1190;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1810;" style="z-index:6;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="m" class="tp-rs-img rs-lazyload" width="52" height="80" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-13.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-8-layer-6" data-type="image" data-xy="x:c;xo:724px,549px,146px,94px;y:m;yo:252px,190px,277px,229px;" data-text="l:22;a:inherit;" data-dim="w:58px,48px,30px,16px;h:63px,52px,33px,17px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:-50px;rZ:-50deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:900;sp:500;sR:900;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2100;" style="z-index:7;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="m" class="tp-rs-img rs-lazyload" width="58" height="63" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-14.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-8-layer-7" data-type="image" data-xy="x:c;xo:726px,526px,183px,112px;y:m;yo:-233px,-163px,77px,67px;" data-text="l:22;a:inherit;" data-dim="w:48px,38px,25px,18px;h:53px,42px,28px,20px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:right;o:1;rZ:-360deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:600;sp:800;sR:600;" data-frame_999="o:0;tp:600;st:w;sR:2100;" style="z-index:8;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="g" class="tp-rs-img rs-lazyload" width="48" height="53" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-6.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-8-layer-10" data-type="image" data-xy="x:c;xo:436px,322px,8px,0;y:m;yo:23px,21px,186px,151px;" data-text="l:22;a:inherit;" data-dim="w:790px,590px,340px,280px;h:564px,421px,243px,200px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:300;sp:500;sR:300;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2700;" style="z-index:9;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="m" class="tp-rs-img rs-lazyload" width="790" height="564" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-11.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-8-layer-11" data-type="image" data-xy="x:c;xo:53px,23px,-221px,-140px;y:m;yo:-92px,-82px,107px,106px;" data-text="l:22;a:inherit;" data-dim="w:55px,40px,30px,25px;h:56px,41px,31px,25px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:top;o:1;rZ:400deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:400;sp:1000;sR:400;" data-frame_999="o:0;tp:600;st:w;sR:2100;" style="z-index:10;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="g" class="tp-rs-img rs-lazyload" width="55" height="56" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-2.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-8-layer-13" data-type="text" data-xy="xo:0,0,1px,1px;y:m;yo:176px,168px,26px,-43px;" data-text="l:22;a:inherit;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1400;sp:500;sR:1400;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1600;" style="z-index:11;font-family:'Muli';"><a itemprop="url" href="https://maree.qodeinteractive.com/portfolio-item/life-and-inspiration/" target="_self" class="edgtf-btn edgtf-btn-medium edgtf-btn-outline edgtf-btn-direction-animation edgtf-btn-custom-hover-color" data-hover-color="#ffffff">
+      <span class="edgtf-btn-text">Read More</span>
+      <span class="edgtf-btn-background-holder">
+      <span class="edgtf-btn-background"></span>
+      </span>
+      </a>
+      </rs-layer><rs-layer id="slider-1-slide-8-layer-14" data-type="text" data-color="#6d6d6d||#6d6d6d||#a7a7a7||#a7a7a7" data-xy="xo:0,0,0,-718px;y:m;yo:71px,71px,-80px,-221px;" data-text="w:normal;l:30;fw:300;a:inherit;" data-dim="w:645px;h:61px;" data-vbility="t,t,t,f" data-rsp_o="off" data-rsp_bd="off" data-frame_0="o:1;tp:600;" data-frame_0_lines="d:15;x:50px;o:0;" data-frame_1="tp:600;e:power1.out;st:1200;sp:500;sR:1200;" data-frame_1_lines="d:15;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1800;" style="z-index:12;font-family:'Muli';">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.
+      </rs-layer><rs-layer id="slider-1-slide-8-layer-15" data-type="text" data-color="#000000" data-xy="xo:-3px,-3px,-3px,-1px;y:m;yo:-129px,-113px,-243px,-173px;" data-text="s:90,80,60,40;l:100;ls:-2px;a:inherit;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:800;sp:500;sR:800;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2200;" style="z-index:13;font-family:'Muli';">Our new folio
+      </rs-layer><rs-layer id="slider-1-slide-8-layer-16" data-type="text" data-color="#000000" data-xy="xo:-5px,-5px,-5px,-2px;y:m;yo:-35px,-25px,-174px,-125px;" data-text="s:90,80,60,40;l:100;ls:-2px;a:inherit;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1000;sp:500;sR:1000;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2000;" style="z-index:14;font-family:'Muli';">full of <span style=" font-family: Playfair Display; font-style: italic; font-weight: 700;">joy</span>
+      </rs-layer> </rs-slide>
+      <rs-slide style="position: absolute;" data-key="rs-9" data-title="Slide" data-anim="ms:600;r:0;" data-in="o:0;" data-out="a:false;">
+      <img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="Slide" title="Main Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/transparent.png" data-parallax="off" data-no-retina>
+      <rs-layer id="slider-1-slide-9-layer-3" data-type="image" data-xy="x:c;xo:42px,38px,-214px,-134px;y:m;yo:52px,99px,209px,168px;" data-text="l:22;a:inherit;" data-dim="w:49auto,39px,29px,18px;h:48px,38px,28px,18px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;rZ:60deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:800;sp:500;sR:800;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2200;" style="z-index:5;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="m" class="tp-rs-img rs-lazyload" width="49" height="48" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-12.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-5" data-type="image" data-xy="x:c;xo:86px,86px,-189px,-118px;y:m;yo:205px,166px,274px,223px;" data-text="l:22;a:inherit;" data-dim="w:52auto,38px,30px,18px;h:80px,58px,46px,28px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1100;sp:500;sR:1100;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1900;" style="z-index:6;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="m" class="tp-rs-img rs-lazyload" width="52" height="80" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-13.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-6" data-type="image" data-xy="x:c;xo:716px,501px,114px,85px;y:m;yo:-209px,-180px,65px,46px;" data-text="l:22;a:inherit;" data-dim="w:58px,40px,35px,20px;h:63px,43,38px,22px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:-50px;rZ:-50deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:900;sp:500;sR:900;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2100;" style="z-index:7;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="m" class="tp-rs-img rs-lazyload" width="58" height="63" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-14.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-7" data-type="image" data-xy="x:c;xo:788px,538px,148px,100px;y:m;yo:-99px,-122px,105px,83px;" data-text="l:22;a:inherit;" data-dim="w:48px,34px,28px,15px;h:53px,38,31px,17px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:right;o:1;rZ:-360deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:610;sp:800;sR:610;" data-frame_999="o:0;tp:600;st:w;sR:2090;" style="z-index:8;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="g" class="tp-rs-img rs-lazyload" width="48" height="53" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-6.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-10" data-type="image" data-xy="x:c;xo:303px,202px,-88px,-61px;y:m;yo:41px,21px,195px,151px;" data-text="l:22;a:inherit;" data-dim="w:375auto,300px,175px,155px;h:430px,344px,201px,178px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:300;sp:500;sR:300;" data-frame_999="x:-50px;o:0;tp:600;e:power1.out;st:w;sp:500;sR:2700;" style="z-index:9;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="m" class="tp-rs-img rs-lazyload" width="375" height="430" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-15.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-11" data-type="image" data-xy="x:c;xo:145px,82px,-167px,-119px;y:m;yo:-188px,-163px,85px,59px;" data-text="l:22;a:inherit;" data-dim="w:55px,38px,30px,22px;h:56px,39,31px,22px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:top;o:1;rZ:400deg;tp:600;" data-frame_1="tp:600;e:power1.out;st:700;sp:1000;sR:700;" data-frame_999="o:0;tp:600;st:w;sR:1800;" style="z-index:11;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="g" class="tp-rs-img rs-lazyload" width="55" height="56" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/04/short-slider-rev-1-img-2.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-13" data-type="text" data-xy="xo:0,0,1px,1px;y:m;yo:176px,168px,26px,-43px;" data-text="l:22;a:inherit;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1400;sp:500;sR:1400;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1600;" style="z-index:13;font-family:'Muli';"><a itemprop="url" href="https://maree.qodeinteractive.com/portfolio-item/looking-to-expand-my-portfolio/" target="_self" class="edgtf-btn edgtf-btn-medium edgtf-btn-outline edgtf-btn-direction-animation edgtf-btn-custom-hover-color" data-hover-color="#ffffff">
+      <span class="edgtf-btn-text">Read More</span>
+      <span class="edgtf-btn-background-holder">
+      <span class="edgtf-btn-background"></span>
+      </span>
+      </a>
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-14" data-type="text" data-color="#6d6d6d||#a7a7a7||#a7a7a7||#a7a7a7" data-xy="xo:0,-1px,0,-718px;y:m;yo:71px,71px,-80px,-221px;" data-text="w:normal;l:30;fw:300;a:inherit;" data-dim="w:645px;h:61px;" data-vbility="t,t,t,f" data-rsp_o="off" data-rsp_bd="off" data-frame_0="o:1;tp:600;" data-frame_0_lines="d:15;x:50px;o:0;" data-frame_1="tp:600;e:power1.out;st:1200;sp:500;sR:1200;" data-frame_1_lines="d:15;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1800;" style="z-index:14;font-family:'Muli';">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi.
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-15" data-type="text" data-color="#000000" data-xy="xo:-3px,-3px,-3px,-1px;y:m;yo:-129px,-113px,-243px,-173px;" data-text="s:90,80,60,40;l:100;ls:-2px;a:inherit;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:800;sp:500;sR:800;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2200;" style="z-index:15;font-family:'Muli';">Devotion that
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-16" data-type="text" data-color="#000000" data-xy="xo:-5px,-5px,-5px,-2px;y:m;yo:-35px,-25px,-174px,-125px;" data-text="s:90,80,60,40;l:100;ls:-2px;a:inherit;" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:1000;sp:500;sR:1000;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:2000;" style="z-index:16;font-family:'Muli';">never <span style=" font-family: Playfair Display; font-style: italic; font-weight: 700;">ends</span>
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-17" data-type="image" data-xy="x:c;xo:630px,452px,80px,67px;y:m;yo:42px,21px,196px,151px;" data-text="l:22;a:inherit;" data-dim="w:347px,279px,157px,147px;h:430px,346,195px,182px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="x:50px;tp:600;" data-frame_1="tp:600;e:power1.out;st:510;sp:500;sR:510;" data-frame_999="x:-50px;o:0;tp:600;e:power1.out;st:w;sp:500;sR:2490;" style="z-index:10;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" class="tp-rs-img rs-lazyload" width="347" height="430" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-16.png" data-no-retina>
+      </rs-layer><rs-layer id="slider-1-slide-9-layer-19" data-type="image" data-xy="x:c;xo:866px,564px,185px,128px;y:m;yo:189px,166px,266px,229px;" data-text="l:22;a:inherit;" data-dim="w:87px,47px,40px,22px;h:131px,71px,60px,33px;" data-basealign="slide" data-rsp_o="off" data-rsp_bd="off" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:power1.inOut;st:1200;sp:500;sR:1200;" data-frame_999="o:0;tp:600;e:power1.out;st:w;sR:1800;" style="z-index:12;"><img src="//maree.qodeinteractive.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="m" class="tp-rs-img rs-lazyload" width="87" height="131" data-lazyload="//maree.qodeinteractive.com/wp-content/uploads/2019/05/h-2-slider-img-17.png" data-no-retina>
+      </rs-layer> </rs-slide>
+      </rs-slides>
+      </rs-module>
+      <script>
+                setREVStartSize({c: 'rev_slider_1_1',rl:[1920 ,1605,1025,480],el:[734,645,708,600],gw:[1300,1100,580,300],gh:[734,645,708,600],type:'standard',justify:'',layout:'fullwidth',mh:"0"});if (window.RS_MODULES!==undefined && window.RS_MODULES.modules!==undefined && window.RS_MODULES.modules["revslider11"]!==undefined) {window.RS_MODULES.modules["revslider11"].once = false;window.revapi1 = undefined;if (window.RS_MODULES.checkMinimal!==undefined) window.RS_MODULES.checkMinimal()}
+              </script>
+      </rs-module-wrap>
+      
+      </div>
+      </div>
+    
+<div class="panel" data-color="violet">
 
+    <section class="hero hero-bg d-flex justify-content-center align-items-center">
+        <div class="container">
+             <div class="row">
 
-<div class="panel" data-color="">
+                 <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+                       <div class="hero-text">
+                        
+                            <h1 class="site-title" data-aos="fade-up">For HER</h1>
 
-<div class="wrapper">
-    <div class="slider">
-        <div class="slider-inner">
-            <div class="item" data-text="SHE">
-                <img src="images/slide1.png" alt="">
-                <div class="text">
-                    <h1>Maxima <br> fugit</h1>
-                </div>
-            </div>
-            <div class="item" data-text="2">
-                <img src="images/slide1.png" alt="">
-                <div class="text">
-                    <h1>Elmer <br> fugit</h1>
-                </div>
-            </div>
-            <div class="item" data-text="3">
-                <img src="images/slide1.png" alt="">
-                <div class="text">
-                    <h1>Maxima <br> fugit</h1>
-                </div>
-            </div>
+                            <!-- <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Explore more</a> -->
+
+                            <!-- <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +99 080 070 4224</strong> -->
+                       </div>
+                       <a href="#more"><button type="button" class="fill" >Explore more</button></a>
+                 </div>
+
+                 <div class="col-lg-6 col-12">
+                   <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
+
+                     <img src="images/girl.png" class="img-fluid" alt="working girl">
+                   </div>
+                 </div>
+                 
+             </div>
         </div>
-    </div>
-    <a href="#" class="btn">Explore</a>
+</section>
 </div>
-<div class="wave-line">
-    <div class="line line1"></div>
-    <div class="line line2"></div>
-    <div class="line line3"></div>
-</div>
-</div>
-<div class="panel" id="next" data-color="indigo">
-  <h2>Indigo panel</h2>
-</div>
-<div class="panel" data-color="blue">
-  <h2>Blue panel</h2>
+<div id = "more" class="panel"  data-color="indigo">
+  <div class="row">
+    <div class="col-lg-6 col-12">
+        <div class="hero-image container" data-aos="fade-up" data-aos-delay="300">
+
+          <img src="images/spotify.png" class="img-fluid" alt="working girl">
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+        <div class="hero-text">
+         
+             <h1 class="title" data-aos="fade-up">For HER</h1>
+
+             <!-- <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Explore more</a> -->
+
+             <!-- <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +99 080 070 4224</strong> -->
+        </div>
+
+  </div>
+  </div>
 </div>
 <div class="panel" data-color="green">
-  <h2>Green panel</h2>
+ 
 </div>
+
+<div class="panel" data-color="blue">
+    <div class="row">
+        <div class="col-lg-6 col-12">
+            <div class="hero-image container" data-aos="fade-up" data-aos-delay="300">
+    
+              <img src="images/exercise.PNG" class="img-fluid" alt="working girl">
+            </div>
+          </div>
+    
+          <div class="col-lg-6 col-md-10 col-12 d-flex flex-column justify-content-center align-items-center">
+            <div class="hero-text">
+             
+                 <h1 class="title" data-aos="fade-up">For HER</h1>
+    
+                 <!-- <a href="contact.html" class="custom-btn btn-bg btn mt-3" data-aos="fade-up" data-aos-delay="100">Explore more</a> -->
+    
+                 <!-- <strong class="d-block py-3 pl-5 text-white" data-aos="fade-up" data-aos-delay="200"><i class="fa fa-phone mr-2"></i> +99 080 070 4224</strong> -->
+            </div>
+    
+      </div>
+      </div>
+</div>
+
 <div class="panel" data-color="orange">
-  <h2>Orange panel</h2>
+  <h1 class="edgtf-st-title">
+    Working <span class="edgtf-section-bold-ital">process</span> </h1>
 </div>
 <div class="panel" data-color="red">
   <h2>Red panel</h2>
 </div>
 
 
-<script>
-    $(document).ready(function(){
-        $('.slider-inner').slick({
-            infinite:true,
-            slidesToShow: 3,
-            slidesToScroll:3,
-            swipe:false,
-            fade:true,
-            speed:1500
-        })
-    })
-    
-</script>
+
+<%-include("partials/assets1") %>
 
   <%-include("partials/footer") %>

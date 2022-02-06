@@ -46,7 +46,7 @@ app.get("/register", function(req,res){
 })
 app.post("/register",(req,res) => {
 	  
-	let newUser = new User({username:req.body.username, email:req.body.email});
+	let newUser = new User({username:req.body.username, email:req.body.email, date:0000-00-00});
     // console.log(req.body)
 	User.register(newUser, req.body.password, (err,user) => {
 		if(err){
@@ -75,9 +75,15 @@ app.get("/logout",(req,res) => {
 	req.logout();
 	res.redirect("/");
 })
-
+app.get("/music", (req, res)=>{
+	res.render("music");
+})
+app.get("/exercise", (req, res)=>{
+	res.render("exercise");
+})
 //routes
 app.get("/",function(req,res){
+	// console.log(req.user.date);
 	res.render("home");
 })
 

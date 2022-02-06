@@ -4,22 +4,73 @@ body {
     background-color: #f4f4f4;
     transition: background-color 1s ease;
   }
-  
+  .site-title {
+    font-size: 144px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+
+    
+}
+.hero-image{
+    height:100% !important;
+}
   /* panel styles */
   .panel {
     /* min height incase content is higher than window height */
-    min-height: 100vh;
-    /* display: flex; 
+    min-height: 80vh;
+     display: flex; 
     justify-content: space-around;
     align-items: center;
-    font-family: sans-serif;  */
+    font-family: sans-serif;  
     /* outline: 10px solid hotpink; */
     /* turn above on to see the edge of panels */
   }
+  button{
+    width : 100%;
+    height : 50px;
+    margin-bottom : 15px;
+    border : none;
+    border-radius : 5px;
+    color: rgb(238, 20, 74);
+    text-shadow : 0px 1px 0px #888;
+    transition : background-color ease-in-out 0.5s; 
+  }
+  .fill {
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 50px 13px;
+    outline: 0;
+    border: 1px solid rgb(253, 252, 252);
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+  }
   
+  .fill::after {
+    content: "";
+    background-color: rgb(221, 134, 156);;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+  }
+  
+  .fill:hover::after {
+    top: 0px;
+    left: 0px;
+  }
   /* colours */
+  .color-white {
+    background-color: #fff;
+  }
   .color-violet {
-    background-color: rgb(194, 164, 212);
+    background-color: #e7beca;
   }
   .color-indigo {
     background-color: rgb(164, 202, 212);
@@ -60,3 +111,8 @@ body {
     background-color: #191919;
     font-family: 'Open Sans', sans-serif;
 } */
+.edgtf-section-bold-ital{
+  font-family: "Playfair Display",serif;
+  font-style: italic;
+  font-weight: 700;
+}
