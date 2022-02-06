@@ -1,0 +1,62 @@
+/* Setting fade transition and default settings */
+body {
+    color: #000;
+    background-color: #f4f4f4;
+    transition: background-color 1s ease;
+  }
+  
+  /* panel styles */
+  .panel {
+    /* min height incase content is higher than window height */
+    min-height: 100vh;
+    /* display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    font-family: sans-serif;  */
+    /* outline: 10px solid hotpink; */
+    /* turn above on to see the edge of panels */
+  }
+  
+  /* colours */
+  .color-violet {
+    background-color: rgb(194, 164, 212);
+  }
+  .color-indigo {
+    background-color: rgb(164, 202, 212);
+  }
+  .color-blue {
+    background-color: rgb(164, 212, 171);
+  }
+  .color-green {
+    background-color: rgb(164, 212, 200);
+  }
+  .color-orange {
+    background-color: rgb(230, 216, 204);
+  }
+  .color-red {
+    background-color: rgb(212, 164, 176);
+  }
+  
+  /* styling for demo, can ignore */
+  /* body {
+    text-align: center;
+    font-size: 120%;
+    line-height: 1.618;
+  }
+  h1, h2 {
+    font-size: 3em;
+    letter-spacing: -0.05em;
+    line-height: 1.1;
+  }
+  p {
+    max-width: 30em;
+    margin-bottom: 1.618em;
+  }
+  a {
+    color: #4332CF;
+  } */
+/* 
+  body {
+    background-color: #191919;
+    font-family: 'Open Sans', sans-serif;
+} */
