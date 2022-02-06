@@ -97,6 +97,9 @@ app.put("/update", (req, res)=>{
 		})
 	}
 })
+app.get("/exercisemiddle", (req, res)=>{
+	res.render("exercisemiddle");
+})
 //routes
 app.get("/",function(req,res){
 	function sendMessage(){
