@@ -81,6 +81,9 @@ app.get("/music", (req, res)=>{
 app.get("/exercise", (req, res)=>{
 	res.render("exercise");
 })
+app.get("/exercisemiddle", (req, res)=>{
+	res.render("exercisemiddle");
+})
 //routes
 app.get("/",function(req,res){
 	// console.log(req.user.date);
