@@ -85,7 +85,7 @@ body {
     background-color: rgb(230, 216, 204);
   }
   .color-red {
-    background-color: rgb(212, 164, 176);
+    background-color: rgb(216, 141, 160);
   }
   
   /* styling for demo, can ignore */
@@ -115,4 +115,57 @@ body {
   font-family: "Playfair Display",serif;
   font-style: italic;
   font-weight: 700;
+}
+.blog_card {
+  margin: 50px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: none;
+  box-shadow: 0 12px 15px rgba(0, 0, 0, 0.1), 0 17px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 0.375rem;
+}
+.blog_card_image {
+  padding: 20px;
+}
+.blog_card_image img {
+  margin-top: -60px;
+  width: 100%;
+  border-radius: 20px;
+  transition: 0.25s ease-in-out;
+  box-shadow: 0 8px 17px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+.blog_card_content {
+  padding: 16px;
+}
+.blog_card_content h3 {
+  font-size: 24px;
+  line-height: 36px;
+  color: #303133;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: -0.5;
+}
+.blog_card_content p {
+  font-size: 16px;
+  color: #777;
+  line-height: 36px;
+}
+.blog_card_content a {
+  text-decoration: none;
+}
+.blog_card_content a h6 {
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #c8a482;
+  margin-bottom: 33px;
+}
+.blog_card:hover .blog_card_image img {
+  transform: translatey(-3%);
 }

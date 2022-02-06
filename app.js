@@ -10,6 +10,7 @@ const client = require('twilio')('ACd86ef1ae1c5f242dd8818767e6d8a5b9', 'f30c79e6
 const app = express();
 
 const User = require("./models/user");
+const Blog = require("./models/blog");
 //db
 mongoose.connect('mongodb+srv://nehagoyal:nehagoyal@cluster0.vqfk9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
   useNewUrlParser: true,
